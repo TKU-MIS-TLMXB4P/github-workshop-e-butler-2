@@ -72,22 +72,61 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
+        <h1>倒數計時器</h1>
+        <br>
+        <div style="display:block; margin:auto;">
+            <input id="year" type="text" class="form-control" placeholder="年" style="width:100px;display:block; margin:auto;">
+            <input id="month" type="text" class="form-control" placeholder="月" style="width:100px;display:block; margin:auto;">
+            <input id="day" type="text" class="form-control" placeholder="日" style="width:100px;display:block; margin:auto;">
+            <input id="hr" type="text" class="form-control" placeholder="時" style="width:100px;display:block; margin:auto;">
+            <input id="min" type="text" class="form-control" placeholder="分" style="width:100px;display:block; margin:auto;">
+            <input id="sec" type="text" class="form-control" placeholder="秒" style="width:100px;display:block; margin:auto;">
+        </div>
+        <br>
+        <script language="javascript">
+            function ShowMeDate() {
+                var year = document.getElementById("year").value;
+                var month = document.getElementById("month").value;
+                var day = document.getElementById("day").value;
+                var hour = document.getElementById("hr").value;
+                var minute = document.getElementById("min").value;
+                var centi = document.getElementById("sec").value;
 
-        <script type="text/javascript">
-            var year = "2015"; var month = "11"; var day = "06"; var hour = "0"; var minute = "0"; var centi = "1";
-            var convert = "0"; var roop = "";
-            var cnt1 = "天"; var cnt2 = "："; var cnt3 = "："; var cnt4 = ".";
-            var baseoffset = "none";
-            var br1 = "1"; var br2 = "1"; var br3 = "1"; var br4 = "1";
-            var com1 = "倒數計時器<br>"; var com2 = ""; var com3 = ""; var com4 = ""; var end = "1";
-            var width = "100%"; var height = "400";
-            var font = "ms pgothic"; var font2 = "7seg4"; var size = "27"; var l_height = "27"; var bold = ""; var italic = ""; var line = "";
-            var space = "0px 0px 0px 0px";
-            var align = "2"; var img = "";
-            var color1 = "87DFFA"; var color2 = "000000"; var color3 = "FFFFFF";
+                var convert = "0"; var roop = "";
+                var cnt1 = "天"; var cnt2 = "："; var cnt3 = "："; var cnt4 = ".";
+                var baseoffset = "none";
+                var br1 = "1"; var br2 = "1"; var br3 = "1"; var br4 = "1";
+                var com1 = "倒數計時器"; var com2 = ""; var com3 = ""; var com4 = ""; var end = "1";
+                var width = "100%"; var height = "400";
+                var font = "ms pgothic"; var font2 = "7seg4"; var size = "27"; var l_height = "27"; var bold = ""; var italic = ""; var line = "";
+                var space = "0px 0px 0px 0px";
+                var align = "2"; var img = "";
+                var color1 = "87DFFA"; var color2 = "000000"; var color3 = "FFFFFF";
+
+                //if(document.referrer.indexOf(".rakuten.")===-1){
+                var cnt1 = encodeURIComponent(cnt1);
+                var cnt2 = encodeURIComponent(cnt2);
+                var cnt3 = encodeURIComponent(cnt3);
+                var cnt4 = encodeURIComponent(cnt4);
+                var com1 = encodeURIComponent(com1);
+                var com2 = encodeURIComponent(com2);
+                var com3 = encodeURIComponent(com3);
+                var com4 = encodeURIComponent(com4);
+                if (!roop) var roop = "";
+                if (!convert) var convert = "0";
+                if (!baseoffset) var baseoffset = "none";
+                if (!font2) var font2 = "0";
+                document.write("<iframe src='http://countdown.reportitle.com/neo_parts.php?year=" + year + "&month=" + month + "&day=" + day + "&hour=" + hour + "&minute=" + minute + "&centi=" + centi + "&cnt1=" + cnt1 + "&cnt2=" + cnt2 + "&cnt3=" + cnt3 + "&cnt4=" + cnt4 + "&br1=" + br1 + "&br2=" + br2 + "&br3=" + br3 + "&br4=" + br4 + "&com1=" + com1 + "&com2=" + com2 + "&com3=" + com3 + "&com4=" + com4 + "&end=" + end + "&width=" + width + "&height=" + height + "&font=" + font + "&size=" + size + "&l_height=" + l_height + "&bold=" + bold + "&italic=" + italic + "&line=" + line + "&space=" + space + "&align=" + align + "&img=" + img + "&color1=" + color1 + "&color2=" + color2 + "&color3=" + color3 + "&roop=" + roop + "&convert=" + convert + "&baseoffset=" + baseoffset + "&font2=" + font2 + "' width='" + width + "px' height='" + height + "px' frameborder='0' scrolling='no' style='margin:0;padding:0'></iframe>");
+                //}
+                document.write("<div style='display:none'>");
+                document.write("</div>");
+
+    }
         </script>
-        <script type="text/javascript" src="http://countdown.reportitle.com/js/neo1.js"></script>
-        <script type="text/javascript" src="http://countdown.reportitle.com/js/neo2.js"></script>
+
+        <button type="button" class="btn btn-default" style="display:block; margin:auto;" onclick="ShowMeDate()">開始</button>
+        <br>
+
 
 
         <script src=https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js></script>
