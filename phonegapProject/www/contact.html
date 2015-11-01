@@ -11,7 +11,6 @@
     <link href=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css rel=stylesheet>
     <link href=starter-template.css rel=stylesheet> <!--[if lt IE 9]><script src=~/Scripts/AssetsBS3/ie8-responsive-file-warning.js></script><![endif]-->
     <script src=ie-emulation-modes-warning.js></script> <!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]-->
-    <script src="phonegap.js"></script>
     </head>
     <body>
         <nav class="navbar navbar-inverse navbar-fixed-top" role=navigation>
@@ -23,37 +22,42 @@
                 <span class=icon-bar></span> 
                 <span class=icon-bar></span> 
             </button> 
-            <a class=navbar-brand href=#>Time-Counter</a>
+            <a class=navbar-brand href=#>Time Counter</a>
             </div>
             <div id=navbar class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li ><a href="index.html">Home</a>
+                    <li><a href="index.html">Home</a>
                     <li><a href="aboutus.html">About</a>
-                    <li class=active><a href=#>Contact</a>
-</ul>
+                    <li class=active><a href="contact.html">Contact</a>
+                </ul>
             </div>
         </div>
         </nav>
 
-        <div class=container style="display:block;margin:auto;">
-            <img class="profile" src="g.png" style="border-radius:70%;">
-            <h1 margin="100%">Contact us</h1>
+        <div class="container" style="display:block;margin:auto;">
+            <img class="profile" src="g.png" style="border-radius:70%;display:block; margin:auto;">
+            
+            <script>
+                function alertE(){
+                    name = document.getElementById("name").value;
+                    alert(name+"，您好\n你的信件已寄出！");
+                }
+            </script>
             <form action="index.html">
-                <table>
-                    <tr><td>姓名：</td><td><input type="text" id="name" class="form-control"></td></tr>
-                    <tr><td>系級：</td><td><input type="text" class="form-control"></td></tr>
-                    <tr><td>學號：</td><td><input type="text" class="form-control"></td></tr>
-                    <tr><td colspan='2'>想說的話：</td></tr>
+                <center><table>
+                    <tr><h1 margin="100%" style="display:block; margin:auto;">Contact us</h1></tr>
+                    <tr><td><h3>姓名：</h3></td><td><input type="text" id="name" class="form-control"></td></tr>
+                    <tr><td><h3>系級：</h3></td><td><input type="text" class="form-control"></td></tr>
+                    <tr><td><h3>學號：</h3></td><td><input type="text" class="form-control"></td></tr>
+                    <tr><td colspan='2'><br></td></tr>
                     <tr><td colspan='2'><textarea cols="50" rows="5" placeholder="輸入你想要寫的內容..." class="form-control"></textarea></td></tr>
                     <tr><td colspan='2'><button onclick="alertE();" class="btn btn-default" style="display:block; margin:auto;">送出信件</button></td></tr>
-                </table>
+                </table></center>
             </form>
         </div>
-        <script>
-            function alertE(){
-                 name = document.getElementById("name").value;
-                alert(name+"，您好\n你的信件已寄出！");
-            }
-        </script>
+        
+        <script src=https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js></script>
+        <script src=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js></script>
+        <script src=ie10-viewport-bug-workaround.js></script>
 </body>
 </html>

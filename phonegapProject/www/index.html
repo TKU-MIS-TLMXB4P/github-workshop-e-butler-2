@@ -22,33 +22,33 @@
                 <span class=icon-bar></span> 
                 <span class=icon-bar></span> 
             </button> 
-            <a class=navbar-brand href=#>Time-Counter</a>
+            <a class=navbar-brand href=#>Time Counter</a>
             </div>
             <div id=navbar class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class=active><a href="index.html">Home</a>
                     <li><a href="aboutus.html">About</a>
                     <li><a href="contact.html">Contact</a>
-</ul>
+                </ul>
             </div>
         </div>
         </nav>
 
         
-        <h1 class ="text-center">倒數計時器</h1>
-
-        <br>
-        <div style="display:block; margin:auto;">
+        <div id="innerCounter" style="display:block; margin:auto;">
+            <h1 class ="text-center">Time Counter</h1>
+            <center><blockquote><footer>於下方輸入目標時間</footer></blockquote></center>
+            <br>
             <input id="year" type="text" class="form-control" placeholder="年" style="width:100px;display:block; margin:auto;">
-            <br>
+            
             <input id="month" type="text" class="form-control" placeholder="月" style="width:100px;display:block; margin:auto;">
-            <br>
+            
             <input id="day" type="text" class="form-control" placeholder="日" style="width:100px;display:block; margin:auto;">
             <br>
             <input id="hr" type="text" class="form-control" placeholder="時" style="width:100px;display:block; margin:auto;">
-            <br>
+            
             <input id="min" type="text" class="form-control" placeholder="分" style="width:100px;display:block; margin:auto;">
-            <br>
+            
             <input id="sec" type="text" class="form-control" placeholder="秒" style="width:100px;display:block; margin:auto;">
         </div>
         <br>
@@ -62,15 +62,15 @@
                 var centi = document.getElementById("sec").value;
 
                 var convert = "0"; var roop = "";
-                var cnt1 = "天"; var cnt2 = "："; var cnt3 = "："; var cnt4 = ".";
+                var cnt1 = "日<br>"; var cnt2 = "："; var cnt3 = "："; var cnt4 = ".";
                 var baseoffset = "none";
                 var br1 = "1"; var br2 = "1"; var br3 = "1"; var br4 = "1";
-                var com1 = "倒數計時器"; var com2 = ""; var com3 = ""; var com4 = ""; var end = "1";
+                var com1 = ""; var com2 = ""; var com3 = ""; var com4 = ""; var end = "1";
                 var width = "100%"; var height = "400";
-                var font = "ms pgothic"; var font2 = "7seg4"; var size = "27"; var l_height = "27"; var bold = ""; var italic = ""; var line = "";
+                var font = "ms pgothic"; var font2 = "7seg4"; var size = "64"; var l_height = "27"; var bold = ""; var italic = ""; var line = "";
                 var space = "0px 0px 0px 0px";
                 var align = "2"; var img = "";
-                var color1 = "87DFFA"; var color2 = "000000"; var color3 = "FFFFFF";
+                var color1 = "000000"; var color2 = "000000"; var color3 = "FFFFFF";
 
                 //if(document.referrer.indexOf(".rakuten.")===-1){
                 var cnt1 = encodeURIComponent(cnt1);
@@ -85,16 +85,20 @@
                 if (!convert) var convert = "0";
                 if (!baseoffset) var baseoffset = "none";
                 if (!font2) var font2 = "0";
-                document.write("<iframe src='http://countdown.reportitle.com/neo_parts.php?year=" + year + "&month=" + month + "&day=" + day + "&hour=" + hour + "&minute=" + minute + "&centi=" + centi + "&cnt1=" + cnt1 + "&cnt2=" + cnt2 + "&cnt3=" + cnt3 + "&cnt4=" + cnt4 + "&br1=" + br1 + "&br2=" + br2 + "&br3=" + br3 + "&br4=" + br4 + "&com1=" + com1 + "&com2=" + com2 + "&com3=" + com3 + "&com4=" + com4 + "&end=" + end + "&width=" + width + "&height=" + height + "&font=" + font + "&size=" + size + "&l_height=" + l_height + "&bold=" + bold + "&italic=" + italic + "&line=" + line + "&space=" + space + "&align=" + align + "&img=" + img + "&color1=" + color1 + "&color2=" + color2 + "&color3=" + color3 + "&roop=" + roop + "&convert=" + convert + "&baseoffset=" + baseoffset + "&font2=" + font2 + "' width='" + width + "px' height='" + height + "px' frameborder='0' scrolling='no' style='margin:0;padding:0'></iframe>");
+                //document.write(
+                innerCounter.innerHTML="<iframe src='http://countdown.reportitle.com/neo_parts.php?year=" + year + "&month=" + month + "&day=" + day + "&hour=" + hour + "&minute=" + minute + "&centi=" + centi + "&cnt1=" + cnt1 + "&cnt2=" + cnt2 + "&cnt3=" + cnt3 + "&cnt4=" + cnt4 + "&br1=" + br1 + "&br2=" + br2 + "&br3=" + br3 + "&br4=" + br4 + "&com1=" + com1 + "&com2=" + com2 + "&com3=" + com3 + "&com4=" + com4 + "&end=" + end + "&width=" + width + "&height=" + height + "&font=" + font + "&size=" + size + "&l_height=" + l_height + "&bold=" + bold + "&italic=" + italic + "&line=" + line + "&space=" + space + "&align=" + align + "&img=" + img + "&color1=" + color1 + "&color2=" + color2 + "&color3=" + color3 + "&roop=" + roop + "&convert=" + convert + "&baseoffset=" + baseoffset + "&font2=" + font2 + "' width='" + width + "px' height='" + height + "px' frameborder='0' scrolling='no' style='margin:0;padding:0'></iframe>";
                 //}
                 //document.write("<div style='display:none'>");
-                document.write("<button type='button' class='btn btn-default' style='display:block; margin:auto;' onclick='javascript:window.location.reload()'>返回</button>");
+                //document.write("<button type='button' class='btn btn-default' style='display:block; margin:auto;' onclick='javascript:window.location.reload()'>返回</button>");
+                document.getElementById("btnReturn").style.display = "block"; 
+                document.getElementById("btnStart").style.display = "none"; 
                 //document.write("</div>");
 
     }
         </script>
         
-        <button type="button" class="btn btn-default" style="display:block; margin:auto;" onclick="ShowMeDate()">開始</button>
+        <button id="btnStart" type="button" class="btn btn-primary" style="display:block; margin:auto;" onclick="ShowMeDate()">開始</button>
+        <button id="btnReturn" type='button' class='btn btn-warning' style='display:none; margin:auto;' onclick='javascript:window.location.reload()'>返回</button>
         <br>
 
 
